@@ -13,10 +13,14 @@ const Home = () => {
 
     const InitialPerson = (data) => {
         dispatch(Next(data))
-    } 
+    }
+
     useEffect(() => {
         axios.get(Page)
-        .then(res => InitialPerson(res))
+        .then(res => {
+            console.log(res)
+            InitialPerson(res.data)
+        })
     }, [])
 
     return (
