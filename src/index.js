@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from "react-redux";
-
-import RickAndMorty from "./reducer/reducer"
+import store from "./components/index"
 
 import './index.css';
 import App from './App';
@@ -11,11 +10,11 @@ import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
-    <Provider store={ RickAndMorty }>
-      <React.StrictMode>
-          <App />
-      </React.StrictMode>
-    </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+        <App />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 reportWebVitals();

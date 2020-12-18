@@ -4,6 +4,7 @@ import Home from "./components/body/home/home"
 import Header from "./components/header/header"
 
 const App = () => {
+  localStorage.setItem("favoriteList", JSON.stringify([]))
   return (
     <div className="App">
       <header>
